@@ -9,3 +9,9 @@ $colorCarrot: #D84E30;
 $colorOrange: #F37E26;
 $colorStatis: #009FD6;
 $colorBlue: #003C82;
+
+
+@mixin text {
+    line-height: 27px;
+    font-size: 18px;
+  }

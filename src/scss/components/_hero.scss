@@ -1,0 +1,19 @@
+.main-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 125px;
+    padding: 120px 105px 120px 105px;
+    background-color: $colorButton;
+    color: $colorBlack;
+    height: max-content;
+    
+    // .main-right-img {
+    //   background: url("../../img/hero1.png");
+    // }
+    .main-left-text {
+      .upcase {
+        text-transform: uppercase;
+        color: $bgColorButton;
+      }
+    }
+}

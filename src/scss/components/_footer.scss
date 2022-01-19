@@ -1,0 +1,52 @@
+.main-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 125px;
+    padding: 120px 105px 120px 105px;
+    background-color: $colorBlue;
+    color: $colorButton;
+    height: max-content;
+    h4 {
+      font-size: 28px;
+      line-height: 42px;
+    }
+    p {
+      margin-top: 40px;
+      @include text;
+    }
+    button {
+      margin-top: 80px;
+      border: none;
+      background-color: transparent;
+      color: $colorButton;
+      text-transform: uppercase;
+      a {
+        display: flex;
+        gap: 22px;
+        text-decoration: none;
+        color: $colorButton;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 2px;
+      }
+    }
+  
+    .footer-right-text {
+      a {
+        color: $colorButton;
+      }
+      .copyright {
+        margin-top: 105px;
+        @include text;
+        p {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+    .footer-left-text {
+      h4 {
+        width: 650px;
+      }
+    }
+}

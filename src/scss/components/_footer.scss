@@ -35,8 +35,11 @@
       a {
         color: $colorButton;
       }
+      .maright{
+        margin-right: 133px;
+      }
       .copyright {
-        margin-top: 105px;
+        margin-top: 126px;
         @include text;
         p {
           margin: 0;

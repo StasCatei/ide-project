@@ -11,9 +11,20 @@
     //   background: url("../../img/hero1.png");
     // }
     .main-left-text {
+        h1{
+            font-size: 75px;
+            font-family: 'Ideal Sans';
+        }
       .upcase {
         text-transform: uppercase;
         color: $bgColorButton;
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      p{
+          font-size: 24px;
+          font-weight: 400;
+          font-family: 'Ideal Sans';
       }
     }
 }

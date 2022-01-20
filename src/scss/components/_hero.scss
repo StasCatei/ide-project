@@ -1,4 +1,4 @@
-.heroFirst {
+.hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 125px;
@@ -6,7 +6,7 @@
     background-color: $colorButton;
     color: $colorBlack;
     height: max-content;
-    
+
     .main-left-text {
         h1{
             font-size: 75px;

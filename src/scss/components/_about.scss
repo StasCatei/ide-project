@@ -1,60 +1,56 @@
-.about {
-  .container{
-      background-color: $colorGrey;
-      width: 99.99%;
-    .about-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      margin-bottom: 120px;
-      margin-left: 235px;
-      margin-right: 220px;
-    }
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 120px;
+  margin-left: 235px;
+  margin-right: 220px;
+  background-color: $colorGrey;
+  width: 99.99%;
+}
+
+.about-title {
+  display: grid;
+  grid-template-rows: 1fr 0.1fr;
+  background-color: $colorBlue;
+  height: 1fr;
+  width: 1fr;
+  color: $colorButton;
+  padding-bottom: 233px;
+  padding-inline: 95px;
+
+  h6 {
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    margin-top: 120px;
   }
-  .firstColumn {
-    display: grid;
-    grid-template-rows: 1fr 0.1fr;
+
+  h3 {
+    width: 255px;
   }
-  .two {
-    height: 80px;
-    color: $colorButton;
-  }
-  .one {
-    background-color: $colorBlue;
-    height: 1fr;
-    width: 1fr;
-    color: $colorButton;
-    padding-bottom: 233px;
-    padding-inline: 95px;
-    h6 {
-      text-transform: uppercase;
-      margin-bottom: 60px;
-      margin-top: 120px;
-    }
-    h3 {
-      width: 255px;
-    }
-  }
+}
+
+.about-component {
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr;
   
-  .secondColumn {
-    display: grid;
-    grid-template-rows: 0.5fr 0.5fr;
-    .three {
-      height: 100px;
-      img {
-        object-fit: cover;
-        object-position: center;
-      }
+  .about-img {
+    height: 100px;
+    
+    img {
+      object-fit: cover;
+      object-position: center;
     }
-    .four {
-      z-index: 2;
-      background-color: $colorCard;
-      padding: 35px 115px 75px 115px;
-      p {
-        width: 540px;
-        line-height: 27px;
-        font-size: 18px;
-        color: $colorButton;
-      }
-    }
+  }
+}
+
+.about-description {
+  background-color: $colorCard;
+  padding: 35px 115px 75px 115px;
+  
+  p {
+    width: 540px;
+    line-height: 27px;
+    font-size: 18px;
+    color: $colorButton;
   }
 }

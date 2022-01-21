@@ -21,49 +21,53 @@
   </head>
   <body>
     <header class="main-header">
-      <a href="/" class="logo">
-        <img src="../../img/logo.png" alt="Logo of application IDS"/>
+      <a href="/" class="header-logo">
+        <img src="img/logo.png" alt="Logo IDS"/>
       </a>
-
+      <!-- .header-logo -->
       <nav class="header-nav">
-        <a href="" class="active">About Us</a>
-        <a href="">Knowledge managment journey</a>
-        <a href="">Knowledge solution</a>
+        <a class="active" href="#" title="about link" aria-labelledby="Go to page About US">About Us</a>
+        <a href="#" title="Knowledge management link" aria-labelledby="Go to page Knowledge managment">Knowledge managment journey</a>
+        <a href="#" title="Knowledge solution link" aria-labelledby="Go to page Knowledge solution">Knowledge solution</a>
       </nav>
-
-      
-        <button class="header-button">
-          <a href="">Download PDF</a>
-        </button>
-      
+      <a href="#" class="btn primary" target="_blank" title="download pdf" aria-labelledby="Download PDF file">Download PDF</a>
     </header>
     <!-- .main-header -->
     <main class="main-wrapper">
-      <section class = "hero">
-        <div class="main-left-text">
-          <h1>Welcome to the insert some lorem copy here</h1>
-          <h4 class="upcase">Vision, Learning, Collaboration.</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit.</p>
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Welcome to the insert some lorem copy here</h1>
+            <h4>Vision, Learning, Collaboration.</h4>
+            <div class="hero-description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+          <!-- .hero-content -->
+          <div class="hero-img">
+            <img src="img/hero.png" alt="astronaut is dabbing and riding a ps controller">
+          </div>
+          <!-- .hero-image -->
         </div>
-        <div class="main-right-img">
-          <img src="../../img/hero1.png" alt="astronaut is dabbing and riding a ps controller">
-        </div>
+        <!-- .hero-container -->
       </section>
-      <section class="about">
+      <!-- .hero-section -->
+      <!-- <section class="about">
         <div class="container">
           <div class="about-content">
-            <div class="firstColumn">
-              <div class="one">
+            <div class="about-title">
+              <div>
                 <h6>about</h6>
                 <h3>IDS&apos;s Knowledge Management in Action</h3>
               </div>
-              <div class="two"></div>
-            </div>
-            <div class="secondColumn">
-              <div class="three">
-                <img src="../../img/space.png" alt="space picture" />
-              </div>
-              <div class="four">
+            </div> -->
+            <!-- .about-title -->
+            <!-- <div class="about-component">
+              <div class="about-img">
+                <img src="img/space.png" alt="space picture" />
+              </div> -->
+              <!-- .about-image -->
+              <!-- <div class="about-descrition">
                 <p>
                   Sed metus ligula, auctor eget sagittis eu, elementum vel est.
                   Nam in dolor bibendum, mollis felis eget, ullamcorper odio.
@@ -74,11 +78,15 @@
                   Etiam ultrices tortor sapien, placerat ultrices nisl viverra
                   non.
                 </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+              </div> -->
+              <!-- .about-description -->
+            <!-- </div> -->
+            <!-- .about-component -->
+          <!-- </div> -->
+          <!-- .about-content -->
+        <!-- </div>
+      </section> -->
+      <!-- .main-about -->
     </main>
     <!-- .main-wrapper -->
     <footer class="main-footer">
@@ -98,13 +106,11 @@
           aliquet semper nulla, in aliquam elit auctor quis. Vestibulum vel
           turpis nibh.
         </p>
-        <button>
-          <a href="/">contact us <img src="../../img/arrow.png" alt="an arrow used as anchor"/></a>
-        </button>
+        <a href="/">contact us <img src="img/arrow.png" alt="an arrow used as anchor"/></a>
       </div>
       <div class="footer-right-text">
         <h4>About IDB</h4>
-        <p class="maright">
+        <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lectus
           nulla, mollis ac facilisis id, auctor sed justo. Sed ut consectetur
           massa. Fusce tristique semper justo, ac porta tortor consectetur a. Ut

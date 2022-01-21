@@ -1,32 +1,34 @@
+
 .main-header {
-    display: grid;
-    align-items: center;
-    grid-template-columns: max-content 1fr max-content;
-    padding-inline: 55px;
-    height: 110px;
-    text-transform: uppercase;
-    a {
-      text-decoration: none;
-      color: $colorBlack;
-    }
-    .active {
-      color: $bgColorButton;
-    }
+  margin: 0;
+  display: grid;
+  align-items: center;
+  grid-template-columns: max-content 1fr max-content;
+  padding-inline: 55px;
+  height: 110px;
+  text-transform: uppercase;
+  a {
+    text-decoration: none;
+    color: $colorBlack;
   }
+  .active {
+    color: $bgColorButton;
+  }
+}
   
-  .header-nav {
-    display: flex;
-    justify-content: center;
-    font-size: 16px;
-    line-height: 24px;
-    gap: 120px;
+.header-nav {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 24px;
+  gap: 120px;
+}
+
+.header-button {
+  background-color: $bgColorButton;
+  padding: 12px 24px;
+  border: none;
+  a {
+    color: $colorButton;
   }
-  
-  .header-button {
-    background-color: $bgColorButton;
-    padding: 12px 24px 12px 24px;
-    border: none;
-    a {
-      color: $colorButton;
-    }
-  }
+}

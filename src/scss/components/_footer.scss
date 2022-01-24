@@ -3,8 +3,8 @@
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 125px;
   padding: 120px 105px;
-  background-color: $colorBlue;
-  color: $colorButton;
+  background-color: $colorDarkBlue;
+  color: $colorWhite;
   height: max-content;
 
   h4 {
@@ -14,12 +14,11 @@
 
   p {
     margin-top: 40px;
-    @include text;
   }
 
-  button {
+  .footer-left-text a {
     margin-top: 80px;
-    color: $colorButton;
+    color: $colorWhite;
     text-transform: uppercase;
     display: flex;
     gap: 22px;
@@ -32,7 +31,7 @@
   .footer-right-text {
 
     a {
-      color: $colorButton;
+      color: $colorWhite;
     }
 
     .maright{
@@ -41,7 +40,6 @@
 
     .copyright {
       margin-top: 126px;
-      @include text;
 
       p {
         margin: 0;
@@ -50,7 +48,7 @@
     }
   }
   .footer-left-text {
-    
+
     h4 {
       width: 650px;
     }

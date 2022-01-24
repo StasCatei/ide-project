@@ -1,3 +1,13 @@
+/* Colors */
+$colorBlack: #000; //$colorBlack
+$colorWhite: #FFF; //$colorWhite
+$colorPink: #E76ECE; //$colorPink
+$colorGrey: #F0F0F0;
+$colorBlue: #1996C3;
+$colorDarkBlue: #003C82;
+
+$colorBlue-100: #023d74;
+
 
 /* Typography */
 $font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -13,19 +23,19 @@ $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
+$font-size-base: 18px;
+$font-size-base-mobile: 16px;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
 $line-height-base: 27px;
 $line-height-base-mobile: 24px;
 
-/* Colors */
-$colorBlack: #000; //$colorBlack
-$colorWhite: #FFF; //$colorWhite
-$colorPink: #E76ECE; //$colorPink
-$colorGrey: #F0F0F0;
-$colorBlue: #1996C3;
-$colorDarkBlue: #003C82;
-
-
-@mixin text {
-    line-height: 27px;
-    font-size: 18px;
-  }
+/* Z-index */
+$zindex-sticky: 1020;
+$zindex-fixed: 1030;
+$zindex-backdrop: 1040;

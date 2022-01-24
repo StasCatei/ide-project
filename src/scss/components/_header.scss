@@ -1,34 +1,50 @@
-
 .main-header {
-  margin: 0;
-  display: grid;
-  align-items: center;
-  grid-template-columns: max-content 1fr max-content;
-  padding-inline: 55px;
-  height: 110px;
-  text-transform: uppercase;
-  a {
-    text-decoration: none;
-    color: $colorBlack;
-  }
-  .active {
-    color: $bgColorButton;
-  }
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 1px solid $colorGrey;
+  background-color: $colorWhite;
+  z-index: $zindex-sticky;
 }
-  
+ 
+.header-container{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
 .header-nav {
+  position: relative;
   display: flex;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 24px;
-  gap: 120px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  row-gap: 20px;
+  @include fluidValue(padding-right, 187, 56, 1680, 1200);
+  @include fluidValue(column-gap, 120, 56, 1680, 1200);
+
+  a{
+    font-size: $font-size-base-mobile;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1.5;
+    color: $colorBlack;
+
+    &.active{
+      color: $colorPink;
+    }
+  }
 }
 
 .header-button {
-  background-color: $bgColorButton;
+  background-color: $colorPink;
   padding: 12px 24px;
   border: none;
   a {
-    color: $colorButton;
+    color: $colorWhite;
   }
 }

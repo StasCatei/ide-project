@@ -6,45 +6,167 @@
   border-bottom: 1px solid $colorGrey;
   background-color: $colorWhite;
   z-index: $zindex-sticky;
+  .section-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    max-width: 1680px;
+    padding: 21px 60px;
+    margin: 0 auto;
+    font-family: $font-ideal-sans;
+  }
+  .header__logo {
+    display: flex;
+    width: 100%;
+    max-width: 105px;
+    height: 58px;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
- 
-.header-container{
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  max-width: 1680px;
-  margin: 0 auto;
-}
-
-.header-nav {
+.header__nav {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
   row-gap: 20px;
+  gap: 187px 20px;
   @include fluidValue(padding-right, 187, 56, 1680, 1200);
   @include fluidValue(column-gap, 120, 56, 1680, 1200);
-
-  a{
+  nav a {
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+    text-transform: uppercase;
+  }
+  a {
     font-size: $font-size-base-mobile;
     font-weight: $font-weight-medium;
     text-transform: uppercase;
     text-decoration: none;
     line-height: 1.5;
     color: $colorBlack;
-
-    &.active{
+    &.active {
       color: $colorPink;
+      font-family: $font-family-base;
     }
   }
 }
 
-.header-button {
-  background-color: $colorPink;
-  padding: 12px 24px;
-  border: none;
-  a {
-    color: $colorWhite;
+.icon-menu {
+  display: none;
+  @media (max-width: 1024px) {
+    display: block;
+    position: absolute;
+    right: 35px;
+    top: 10px;
+  }
+}
+
+/// BUTTON BURGHER
+@media (max-width: 1024px) {
+  .menu-mobile {
+    visibility: hidden;
+    display: grid;
+    align-content: start;
+    position: fixed;
+    left: 0;
+    right: 0;
+    // bottom: 150px;
+    top: 150px;
+  }
+
+  .menu-mobile nav {
+    display: grid;
+    justify-content: stretch;
+    gap: unset;
+    column-gap: 56px;
+    margin-bottom: 50px;
+    padding-right: 0;
+  }
+
+  nav a {
+    padding: 20px 0;
+    text-transform: unset;
+    width: 100%;
+    margin-left: 60px;
+    margin-right: 60px;
+    text-align: left;
+    transition: color 0.25s ease-in-out;
+  }
+
+  .menu-mobile a {
+    border-top: 1px solid #e345c2;
+  }
+
+  .btn {
+    opacity: 1;
+    // display: none;
+    position: absolute;
+    bottom: 400px;
+    text-align: left;
+    margin-left: 60px;
+  }
+
+  // icon menu mobile
+  svg {
+    height: 80px;
+    position: absolute;
+    width: 80px;
+  }
+  .plate {
+    height: 80px;
+    width: 80px;
+  }
+  .burger {
+    filter: url(#gooeyness);
+  }
+  .x {
+    transform: scale(0);
+    transition: transform 400ms;
+  }
+  .line {
+    fill: none;
+    stroke: black;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform-origin: 50%;
+    transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms,
+      transform 500ms 200ms;
+  }
+  .x .line {
+    stroke-width: 5.5px;
+  }
+  /* First plate */
+  .plate1 .line2 {
+    stroke-dasharray: 40 200;
+    stroke-dashoffset: 0px;
+  }
+  .plate1 .line3 {
+    stroke-dasharray: 40 179;
+    stroke-dashoffset: 0px;
+  }
+  .active .line {
+    transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms;
+  }
+  .active.plate1 .line1 {
+    transform: scale(0, 1);
+    transition: transform 500ms 100ms;
+  }
+  .active.plate1 .line2 {
+    stroke-dasharray: 5px 200;
+    stroke-dashoffset: -164px;
+  }
+  .active.plate1 .line3 {
+    stroke-dasharray: 5px 179;
+    stroke-dashoffset: -142px;
+  }
+  .active .x {
+    transform: scale(1);
+    transition: transform 400ms 350ms;
   }
 }

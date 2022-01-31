@@ -27,7 +27,7 @@
     }
   }
   .message-contact-info {
-    background-color: $colorGreen;
+    background-color: #8DC63F;
     color: $colorWhite;
     padding: 40px 65px 60px 65px;
     position: absolute;
@@ -49,17 +49,17 @@
     min-height: 777px;
   }
   .message-description {
-    position: relative;
-    .description-text {
-      position: absolute;
-      background-color: $colorLightBlue;
-      padding: 120px 115px 93px 115px;
-      max-height: 700px;
-      bottom: 0;
-      h5 {
-        margin-top: 20px;
-        margin-bottom: 30px;
-        color: $colorPink;
-      }
+  position: relative;
+  .description-text {
+    position: absolute;
+    background-color: #EFF9FD;
+    padding: 120px 115px 93px 115px;
+    max-height: 700px;
+    bottom: 0;
+    h5 {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      color: $colorPink;
     }
   }
+}

@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+html {
+  &.no-scroll,
+  &.no-scroll body {
+    @media (max-width: 1023px) {
+      overflow: hidden;
+    }
+  }
+}
+
 body {
   display: grid;
   grid-template-rows: max-content 1fr max-content;

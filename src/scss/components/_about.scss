@@ -1,4 +1,4 @@
-.about-section {
+.section-about {
   position: relative;
   margin-bottom: 120px;
 
@@ -13,44 +13,84 @@
     z-index: -1;
   }
 
-  .container {
+  .about-container {
     display: grid;
     grid-template-columns: max-content 1fr;
+
+    p{
+      max-width: 770px;
+      @media (max-width: 767px) {
+        max-width: 724px;
+      }
+    }
+    @media (max-width: 767px) {
+      display: grid;
+      grid-template-columns: auto;
+    }
+  }
+
+  .about-title {
+    display: grid;
+    align-content: flex-start;
+    justify-content: end;
+    height: calc(100% - 80px);
+    padding: 120px 95px;
+    background-color: $colorDarkBlue;
+    color: $colorWhite;
+    font-family: $font-ideal-sans;
+    margin-left: 155px;
+
+    @media (max-width: 1199px) {
+      padding: 50px 30px;
+    }
+    @media (max-width: 767px) {
+      justify-content: start;
+      min-height: 250px;
+    }
   }
 }
 
-.about-title {
-  display: grid;
-  align-content: flex-start;
-  justify-content: end;
-  height: calc(100% - 80px);
-  padding: 120px 95px;
-  background-color: $colorDarkBlue;
-  color: $colorWhite;
+h3,
+h6 {
+  max-width: 255px;
+}
 
-  h3,
-  h6 {
-    max-width: 255px;
-  }
+h6 {
+  margin-bottom: 60px;
+  text-transform: uppercase;
 
-  h6 {
-    margin-bottom: 60px;
-    text-transform: uppercase;
+  @media (max-width: 767px) {
+    margin-bottom: 10px;
   }
 }
+
 .about-description {
-  display: grid;
-  grid-template-rows: 280px;
+  @media (max-width: 767px) {
+    display: grid;
+    grid-row: 2;
+  }
+
+  .about-description-image {
+    height: 277px;
+    @media (max-width: 1199px) {
+      height: 210px;
+    }
+    img {
+      width: 770px;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
   p {
     background-color: $colorBlue;
     color: $colorWhite;
-    padding: 63px 131px 110px 110px;
-    margin-top: 0;
     font-family: $font-family-base;
-  }
-}
-.about-description-image {
-  img {
-    display: block;
+    margin-top: 0;
+    padding: 63px 30px 110px 40px;
+
+    @media (max-width: 1199px) {
+      padding: 50px 50px;
+    }
   }
 }

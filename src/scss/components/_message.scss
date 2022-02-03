@@ -12,14 +12,20 @@
       grid-template-columns: none;
     }
   }
-
-  &::before {
+  &::before, &::after {
     content: "";
     position: absolute;
-    width: calc(285px + (445) * ((100vw - 1200px) / 1360));
-    height: 516px;
-    background-color: $colorBlue;
+    width: calc(50% - 607px);
     z-index: -1;
+    
+    @media (min-width: 768px) {
+      width: 25%;
+    }
+  }
+
+  &::before {
+    height: calc(100% - 285px);
+    background-color: $colorBlue;
 
     @media (max-width: 1199px) {
       height: calc(100% - 497px);
@@ -32,14 +38,10 @@
   }
 
   &::after {
-    content: "";
-    position: absolute;
     align-self: flex-end;
     right: 0;
-    width: calc(250px + (440) * ((100vw - 1200px) / 1360));
     height: calc(100% - 355px);
     background-color: $colorOrange;
-    z-index: -1;
 
     @media (max-width: 1199px) {
       height: calc(100% - 460px);

@@ -1,5 +1,6 @@
 /*Import aditional javascript files*/
 import './header';
+import './dropdown';
 
 /* Import Styles */
 import '../scss/app.scss';

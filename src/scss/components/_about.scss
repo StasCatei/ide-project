@@ -26,6 +26,7 @@
     }
   }
 }
+<<<<<<< HEAD
 
 .about-content {
   display: grid;
@@ -52,6 +53,30 @@
     text-decoration: underline;
   }
 
+=======
+
+.about-content {
+  display: grid;
+  align-content: start;
+  padding: 120px 95px;
+  background-color: $colorDarkBlue;
+  color: $colorWhite;
+
+  @media (max-width: 1199px) {
+    padding: 50px 30px;
+  }
+
+  @media (min-width: 768px) {
+    height: calc(100% - 80px);
+  }
+
+  h3,
+  h6 {
+    max-width: 255px;
+    font-weight: $font-weight-normal;
+  }
+
+>>>>>>> 15a37f88cfb0d5730c065f1147cd688fb17b7815
   h6 {
     margin-bottom: 60px;
     text-transform: uppercase;

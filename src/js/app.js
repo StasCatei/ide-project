@@ -1,6 +1,7 @@
 /*Import aditional javascript files*/
 import './header';
 import './dropdown';
+//import './swiper';
 
 /* Import Styles */
 import '../scss/app.scss';

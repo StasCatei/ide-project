@@ -1,146 +1,105 @@
 .dropdown {
-    display: flex;
+  margin-bottom: 120px;
+
+  .container {
+    grid-template-columns: max-content auto;
+    column-gap: 50px;
     justify-content: center;
-    margin-bottom: 120px;
 
-    @media (max-width: 1199px) {
-        margin-bottom: 43px;
-    }
-
-    @media (max-width: 767px) {
-    margin-bottom: 50px;
-    flex-direction: column;
-    }
-}
-
-.dropdown-btn {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 50px;
-    height: 50px;
-    margin: 8px 50px 0 0;
-    padding: 0;
-    border: 0;
-    border-radius: 50%;
-    background-color: #F37E26;
-    color: $colorWhite;
-    cursor: pointer;
-
-    @media (max-width: 1199px) {
-        margin: 2px 35px 0 0;
+    @media (max-width: 769px) {
+      grid-template-columns: unset;
+      justify-content: start;
+      row-gap: 20px;
     }
 
-    @media (max-width: 1023px) {
-        min-width: 35px;
-        height: 35px;
-        margin: 10px 35px 0 0;
-    }
-
-    @media (max-width: 767px) {
-        min-width: 30px;
-        height: 30px;
-        margin: 0 0 20px;
-        align-self: start;
-    }
-
-    &:focus {
-        outline: none;
-    }
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      background-color: currentColor;
-      border-radius: 2px;
-    }
-  
-    &::before {
-      width: 26px;
-      height: 2px;
-  
-      @media (max-width: 1023px) {
-        width: 18px;
-      }
-  
-      @media (max-width: 767px) {
-        width: 16px;
-      }
-    }
-  
-    &::after {
-      width: 2px;
-      height: 26px;
-      transition: transform 0.2s linear;
-  
-      @media (max-width: 1023px) {
-        height: 18px;
-      }
-
-      @media (max-width: 767px) {
-        height: 16px;
-      }
-    }
-
-    &.is-active {
-        opacity: 1;
-    
-        &::after {
-          transform: rotate(90deg);
-        }
-    }
-}
- 
-.dropdown-description {
-    max-width: 760px;
-    font-size: 22px;
-    line-height: 1.5;
-    font-style: italic;
-    font-weight: $font-weight-light;
-    
-    @media (max-width: 1199px) {
-        font-size: 18px;
-        line-height: 27px;
-    }
-    
-    @media (max-width: 1023px) {
-        max-width: 500px;
-        width: 100%;
-    }
-
-    @media (max-width: 767px) {
-        max-width: unset;
-        font-size: 18px;
-    }
-    
-    &.is-active {
-        display: unset;
-    
-        p {
-          -webkit-line-clamp: unset;
-    
-          &:not(:first-of-type) {
-            display: block;
-          }
-        }
-    }
-    
     p {
-        @include lineClamp(2);
-        margin: 0 0 40px;
-    
-        @media (max-width: 767px) {
-          margin: 0 0 30px;
-        }
-    
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-    
-        &:not(:first-of-type) {
-          display: none;
-        }
+      max-width: 760px;
+      font-size: 22px;
+      line-height: 33px;
+
+      @media (max-width: 1199px) {
+        max-width: 500px;
+      }
+
+      @media (max-width: 769px) {
+        max-width: 100%;
+      }
     }
+
+    button {
+      cursor: pointer;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      width: max-content;
+      height: max-content;
+    }
+  }
+}
+
+.up {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(180deg);
+  transition: 0.3s ease-in-out;
+}
+
+.rotate {
+  transition: 0.3s ease-in-out;
+  transform: rotate(90deg);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.dropdown-description {
+  max-width: 760px;
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: $font-weight-light;
+
+  @media (max-width: 1199px) {
+    font-size: 18px;
+    line-height: 27px;
+    font-style: italic;
+  }
+
+  @media (max-width: 1023px) {
+    max-width: 500px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: unset;
+    font-size: 18px;
+  }
+
+  &.reveal {
+    display: unset;
+
+    p {
+      -webkit-line-clamp: unset;
+
+      &:not(:first-of-type) {
+        display: block;
+      }
+    }
+  }
+
+  p {
+    @include lineClamp(3);
+    margin: 0 0 40px;
+
+    @media (max-width: 767px) {
+      @include lineClamp(2);
+      margin: 0 0 30px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &:not(:first-of-type) {
+      display: none;
+    }
+  }
 }

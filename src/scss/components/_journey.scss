@@ -1,5 +1,5 @@
 .section-journey {
-  background-color: $colorBlue;
+  background-color: #266299;
   padding: 120px 0;
   color: $colorWhite;
 }
@@ -177,92 +177,3 @@
   background-color: #8DC63F;
 }
 
-// ............................swiper.......................//
-.swiper {
-  overflow: hidden;
-}
-.swiper-wrapper {
-  height: 600px;
-}
-.swiper-slide {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 85px;
-  object-fit: contain;
-}
-
-//..............................//
-.frame {
-  position: absolute;
-  z-index: 1;
-  top: 40px;
-
-  .frame-bar {
-    background-color: $colorGrey;
-    height: 20px;
-    width: 692px;
-    border-radius: 6px 6px 0px 0px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 410px;
-      left: 0;
-      background-color: $colorWhite;
-      height: 9px;
-      width: 692px;
-      border-radius: 0px 0px 6px 6px;
-    }
-  }
-  .circles {
-    display: flex;
-    padding: 7px;
-  }
-
-  .circle {
-    background-color: yellow;
-    height: 8px;
-    width: 8px;
-    border-radius: 50%;
-    margin-left: 16px;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      height: 8px;
-      width: 8px;
-      border-radius: 50%;
-    }
-
-    &::before {
-      background-color: $colorOrange;
-      left: 8px;
-    }
-
-    &::after {
-      background-color: #8DC63F;
-      left: 38px;
-    }
-  }
-}
-.sky {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 49%;
-}
-
-.swiper-slide {
-  width: 100%;
-  height: 100%;
-}
-.swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 12px;
-  color: red;
-  background-color: purple;
-}

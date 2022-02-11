@@ -15,11 +15,12 @@
     }
 
     &::before {
-      content: '';
+      content: "";
       top: 0;
       left: 0;
       height: calc(100% - 657px);
       background-color: $colorBlue;
+      @include fluidValue("max-height", 1040, 414, 767, 320);
 
       @media (min-width: 1199px) {
         height: calc(100% - 264px);
@@ -28,7 +29,7 @@
 
     &::after {
       @media (min-width: 768px) {
-        content: '';
+        content: "";
         bottom: 0;
         right: 0;
         background-color: $colorOrange;
@@ -43,7 +44,7 @@
 }
 
 .message-contact {
-  background-color: #8DC63F;
+  background-color: $colorGreen;
   color: $colorWhite;
   font-family: $font-family-base;
 
@@ -62,6 +63,7 @@
 
 .message-contact-info {
   padding: 40px 25px;
+
   @media (min-width: 1199px) {
     padding: 40px 65px 59px 65px;
   }
@@ -86,13 +88,13 @@
 .message-description {
   padding: 70px 60px;
   font-family: $font-family-base;
-  background-color: #EFF9FD;
+  background-color: $colorLightBlue;
 
   @media (min-width: 768px) {
     margin-top: 120px;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1199px) {
     padding: 120px 115px 93px 115px;
   }
 

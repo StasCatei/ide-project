@@ -1,14 +1,28 @@
 import Swiper, { Navigation, Pagination } from "swiper";
+import $ from "jquery";
+let Years = ["1996-2004", "2005-2009", "2010-2014", "2015-2021", "2021-2030"];
 
-let Menu = ["1996-2004", "2005-2009", "2010-2014", "2015-2021", "2021-2030"];
 var swiper = new Swiper(".swiper", {
-  speed: 400,
-  direction: "vertical",
-  //   loop: true,
-  initialSlide: 0,
-  centeredSlides: true,
-  effect: "fade",
-  init: "true",
+  modules: [Pagination, Navigation],
+  direction: "horizontal",
+  slidesPerView: 1,
+  addSlidesAfter: 1,
+
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+    clickable: true,
+    hideOnClick: true,
+    renderBullet: function (index, className) {
+      return (
+        '<div class="' +
+        className +
+        '">' +
+        '<span class="year">' +
+        Years[index] +
+        "</span>" +
+        "</div>"
+      );
+    },
+  },
 });
-const mySwiper = document.querySelector(".swiper").swiper;
-let index = document.querySelector(".data-swiper-slide-index");
